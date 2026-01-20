@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MOMENTS } from '../constants';
+import { MOMENTS } from '../constants.tsx';
 
 const Jar: React.FC<{ moment: typeof MOMENTS[0] }> = ({ moment }) => (
   <motion.div 

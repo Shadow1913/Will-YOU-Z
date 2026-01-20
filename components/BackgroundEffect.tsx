@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { HER_NAME } from '../constants';
+import { HER_NAME } from '../constants.tsx';
 
 interface Particle {
   x: number;

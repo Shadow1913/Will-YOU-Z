@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { QUALITIES } from '../constants';
+import { QUALITIES } from '../constants.tsx';
 import { X } from 'lucide-react';
 
 const BinaryStar: React.FC = () => (
