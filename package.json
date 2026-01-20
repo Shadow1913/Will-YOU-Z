@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@google/genai": "^0.2.1",
     "framer-motion": "^12.27.1",
     "lucide-react": "^0.562.0",
     "react": "^19.0.0",

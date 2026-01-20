@@ -1,7 +1,6 @@
-
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
-import { ZODIAC_ITEMS, HER_NAME } from '../constants.tsx';
+import { ZODIAC_ITEMS, HER_NAME } from '../constants';
 import { X, ChevronRight, Sparkles, Scissors, Play } from 'lucide-react';
 
 const CoffeeAnimation = () => (
