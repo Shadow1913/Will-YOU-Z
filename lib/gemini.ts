@@ -1,12 +1,21 @@
 import { GoogleGenAI } from "@google/genai";
 
-// Use environment variable for the API key with a fallback for local development/safety
+/**
+ * Handles initialization of the Google GenAI SDK.
+ * In production (GitHub Pages), the VITE_GEMINI_API_KEY environment variable should be set.
+ */
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.API_KEY || "";
 
+// Only initialize if an API key is present to prevent crashes
 export const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
+/**
+ * Generates a poetic message using the Gemini 3 model.
+ */
 export const generateCosmicMessage = async (name: string) => {
-  if (!ai) return "The stars are quiet tonight, but your light still shines bright.";
+  if (!ai) {
+    return "The stars are quiet tonight, but your light still shines bright.";
+  }
 
   try {
     const response = await ai.models.generateContent({
@@ -22,7 +31,7 @@ export const generateCosmicMessage = async (name: string) => {
 
     return response.text || "You are the constant in a shifting universe.";
   } catch (error) {
-    console.error("Gemini Error:", error);
+    console.error("Gemini API Error:", error);
     return "Your presence is a galaxy of warmth in a vast world.";
   }
 };

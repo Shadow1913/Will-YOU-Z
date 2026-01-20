@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  // The base path should match your GitHub repository name exactly
   base: '/Will-YOU-Z/',
   plugins: [react()],
   resolve: {
