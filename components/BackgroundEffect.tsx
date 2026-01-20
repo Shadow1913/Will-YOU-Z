@@ -1,6 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
-import { HER_NAME } from '../constants.tsx';
+import { HER_NAME } from '../constants';
 
 interface Particle {
   x: number;
@@ -40,7 +39,7 @@ const BackgroundEffect: React.FC<{ stage: string }> = ({ stage }) => {
 
     const initParticles = () => {
       particles = [];
-      const particleCount = 897; // As requested in the prompt
+      const particleCount = 897;
 
       const tempCanvas = document.createElement('canvas');
       const tempCtx = tempCanvas.getContext('2d')!;
@@ -114,7 +113,6 @@ const BackgroundEffect: React.FC<{ stage: string }> = ({ stage }) => {
         p.x += p.vx;
         p.y += p.vy;
 
-        // Organic Perlin-like noise
         p.x += Math.sin(Date.now() * 0.001 + p.originX) * 0.4;
         p.y += Math.cos(Date.now() * 0.001 + p.originY) * 0.4;
 

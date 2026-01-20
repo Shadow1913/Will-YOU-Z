@@ -1,13 +1,12 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AppStage } from './types.ts';
-import { HER_NAME, YOUR_NAME, TAGLINE } from './constants.tsx';
-import BackgroundEffect from './components/BackgroundEffect.tsx';
-import Constellation from './components/Constellation.tsx';
-import Zodiac from './components/Zodiac.tsx';
-import Moments from './components/Moments.tsx';
-import { ChevronDown, Volume2, VolumeX, ExternalLink } from 'lucide-react';
+import { AppStage } from './types';
+import { HER_NAME, YOUR_NAME, TAGLINE } from './constants';
+import BackgroundEffect from './components/BackgroundEffect';
+import Constellation from './components/Constellation';
+import Zodiac from './components/Zodiac';
+import Moments from './components/Moments';
+import { Volume2, VolumeX, ExternalLink } from 'lucide-react';
 
 const TypingText: React.FC<{ text: string; className?: string; stagger?: number; delay?: number }> = ({ text, className, stagger = 0.05, delay = 0 }) => {
   const characters = Array.from(text);
