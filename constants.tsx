@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { Quality, Moment, ZodiacItem } from './types';
 import { Coffee, Music, Book, Sparkles, Utensils, Globe, Star, Zap, Film } from 'lucide-react';
 
-export const HER_NAME = "Zara"; 
+export const HER_NAME = "Zaara"; 
 export const YOUR_NAME = "Someone you inspire";
 export const TAGLINE = "In a world of ordinary, she is the definition of extraordinary.";
 
@@ -54,7 +55,7 @@ export const ZODIAC_ITEMS: ZodiacItem[] = [
     title: 'Comfort Food',
     icon: <Utensils className="w-6 h-6" />,
     color: '#FFB7B2',
-    content: "Ice Cream & Momos: The ultimate recipe for a happy Zara."
+    content: "Ice Cream & Momos: The ultimate recipe for a happy Zaara."
   },
   {
     id: 'destination',
